@@ -7,7 +7,7 @@
 
 # Sample
 
-Sample project is available in [andylke/hibernate-id-generators-sample](https://github.com/andylke/hibernate-id-generators-sample).
+Sample project is available in [andylke/im-hibernate-id-generators-sample](https://github.com/andylke/im-hibernate-id-generators-sample).
 
 # Changelog
 
