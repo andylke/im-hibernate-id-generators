@@ -1,4 +1,4 @@
-# I'm Hibernate Id Generators
+# I'm Hibernate Identifier Generators
 
 [![maven central](https://maven-badges.herokuapp.com/maven-central/com.github.andylke/im-hibernate-id-generators/badge.png)](https://maven-badges.herokuapp.com/maven-central/com.github.andylke/im-hibernate-id-generators)
 [![codecov](https://codecov.io/gh/andylke/hibernate-id-generators/branch/master/graph/badge.svg?token=ND15KBP0RI)](https://codecov.io/gh/andylke/hibernate-id-generators)
