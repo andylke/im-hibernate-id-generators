@@ -1,6 +1,7 @@
 # I'm Hibernate Id Generators
 
 [![maven central](https://maven-badges.herokuapp.com/maven-central/com.github.andylke/im-hibernate-id-generators/badge.png)](https://maven-badges.herokuapp.com/maven-central/com.github.andylke/im-hibernate-id-generators)
+[![codecov](https://codecov.io/github/andylke/im-hibernate-id-generators/graph/badge.svg?token=J9TLKV5GQ4)](https://codecov.io/github/andylke/im-hibernate-id-generators)
 
 `I'm Hibernate Id Generators` is a handy and configurable set of custom identifier generators
 for [Hibernate ORM](https://hibernate.org/orm/) that can produce unique, sequential, or partitioned IDs
