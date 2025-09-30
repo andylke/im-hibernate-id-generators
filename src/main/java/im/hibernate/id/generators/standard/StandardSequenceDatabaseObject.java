@@ -4,7 +4,8 @@ import org.hibernate.boot.model.relational.AbstractAuxiliaryDatabaseObject;
 import org.hibernate.boot.model.relational.SqlStringGenerationContext;
 
 /**
- * Auxiliary database object for {@link StandardSequenceState} table, managing it's DDL create and drop.
+ * Auxiliary database object for {@link StandardSequenceState} table, managing it's DDL create and
+ * drop.
  *
  * @author Andy Lian
  */
@@ -32,6 +33,6 @@ public class StandardSequenceDatabaseObject extends AbstractAuxiliaryDatabaseObj
 
   @Override
   public String[] sqlDropStrings(SqlStringGenerationContext context) {
-    return new String[] {"DROP TABLE " + StandardSequenceConstants.SEQUENCE_TABLE};
+    return new String[] {"DROP TABLE IF EXISTS " + StandardSequenceConstants.SEQUENCE_TABLE};
   }
 }

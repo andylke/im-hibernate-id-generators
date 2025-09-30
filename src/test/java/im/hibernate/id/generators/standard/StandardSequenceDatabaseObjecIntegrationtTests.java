@@ -16,7 +16,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /**
- * Database integration tests for {@link StandardSequenceDatabaseObject}
+ * Integration tests for {@link StandardSequenceDatabaseObject}
  *
  * @author Andy Lian
  */
@@ -46,7 +46,13 @@ class StandardSequenceDatabaseObjecIntegrationtTests {
   }
 
   @Test
-  void executeCreateAndDropSqlString() throws SQLException {
+  void executeDropAndCreateSqlString() throws SQLException {
+
+    String[] dropSqls = databaseObject.sqlDropStrings(context);
+    assertThat(dropSqls).hasSize(1);
+    executeSql(dropSqls[0]);
+    assertThat(tableExists(StandardSequenceConstants.SEQUENCE_TABLE)).isFalse();
+
     String[] createSqls = databaseObject.sqlCreateStrings(context);
     assertThat(createSqls).hasSize(1);
     executeSql(createSqls[0]);
@@ -71,11 +77,6 @@ class StandardSequenceDatabaseObjecIntegrationtTests {
                 StandardSequenceConstants.SEQUENCE_TABLE,
                 StandardSequenceConstants.LAST_MODIFIED_AT_COLUMN))
         .isTrue();
-
-    String[] dropSqls = databaseObject.sqlDropStrings(context);
-    assertThat(dropSqls).hasSize(1);
-    executeSql(dropSqls[0]);
-    assertThat(tableExists(StandardSequenceConstants.SEQUENCE_TABLE)).isFalse();
   }
 
   private void executeSql(String sql) throws SQLException {
