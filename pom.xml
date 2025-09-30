@@ -14,7 +14,7 @@
   <version>1.0.0</version>
 
   <name>I'm Hibernate Identifier Generators</name>
-  <description></description>
+  <description>A handy and configurable set of custom identifier generators for Hibernate ORM that can produce unique, sequential, or partitioned IDs with support for cycling, time-based resets, and advanced strategies — all without you writing complex boilerplate code, by simply annotating your entities</description>
   <inceptionYear>2025</inceptionYear>
 
   <licenses>
